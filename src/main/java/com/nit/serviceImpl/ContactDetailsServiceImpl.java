@@ -39,13 +39,13 @@ public class ContactDetailsServiceImpl implements ContactDetailsService {
 
 	@Override
 	public ContactDetails update(int id) {
-		Optional<ContactEntity>  entity = repository.findById(id);
-		ContactEntity contactEntity = entity.get();
-		ContactDetails details=new ContactDetails();
-		if(null!=entity) {		
-			BeanUtils.copyProperties(contactEntity, details);		
-		}	
-		return details;	
+		Optional<ContactEntity> entity = repository.findById(id);
+		ContactDetails details = new ContactDetails();
+		if (entity.isPresent()) {
+			ContactEntity contactEntity = entity.get();	
+				BeanUtils.copyProperties(contactEntity, details);
+		}
+		return details;
 	}
 
 	@Override
