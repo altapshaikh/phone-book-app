@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    password: Password1
+    url: jdbc:sqlserver://localhost\SQLEXPRESS:1222;databaseName=project
+    username: dmartuser
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+        format_sql: true
+    show-sql: true
+
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
