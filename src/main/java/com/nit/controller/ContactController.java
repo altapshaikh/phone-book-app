@@ -18,7 +18,7 @@ import com.nit.service.ContactDetailsService;
 public class ContactController {
 	@Autowired
 	private ContactDetailsService service;
- final String contact="contact";
+ final static String contact="contact";
 	@GetMapping(value = { "/", "register" })
 	public String loadPage(Model model) {
 		ContactDetails details = new ContactDetails();

@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-<html>
+<html lang="eng">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -40,7 +40,7 @@
 			<a href="/register">+ Add New Contact</a>
 		</h3>
 		<table class="table table-striped " style="border: 1px solid black"
-			border="1px" id="myTable">
+			border="1px" id="myTable" description="render data">
 			<thead style="color: black; background-color: orange">
 				<tr>
 					<th>S.NO</th>
