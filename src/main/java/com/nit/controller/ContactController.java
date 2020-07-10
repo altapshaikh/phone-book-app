@@ -18,11 +18,11 @@ import com.nit.service.ContactDetailsService;
 public class ContactController {
 	@Autowired
 	private ContactDetailsService service;
-
+ final String contact="contact";
 	@GetMapping(value = { "/", "register" })
 	public String loadPage(Model model) {
 		ContactDetails details = new ContactDetails();
-		model.addAttribute("contact", details);
+		model.addAttribute(contact, details);
 		return "contact-info";
 	}
 
@@ -41,7 +41,7 @@ public class ContactController {
 			}
 
 		}
-		model.addAttribute("contact", new ContactDetails());
+		model.addAttribute(contact, new ContactDetails());
 		return "contact-info";
 	}
 
@@ -55,7 +55,7 @@ public class ContactController {
 	@GetMapping(value = "/edit/{id}")
 	public String editContact(@PathVariable("id") Integer id, Model model) {
 		ContactDetails details = service.update(id);
-		model.addAttribute("contact", details);
+		model.addAttribute(contact, details);
 		return "contact-info";
 	}
 
